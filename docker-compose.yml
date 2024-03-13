@@ -1,0 +1,25 @@
+# docker compose up --build
+services:
+  server:
+    image: crux:latest
+    build: .
+    network_mode: host
+    volumes:
+      - ./data:/crux/data
+    environment:
+      - RUST_LOG=${RUST_LOG}
+      - PORT=3000
+
+  worker:
+    image: crux:latest
+    build: .
+    network_mode: host
+    deploy:
+      replicas: ${WORKER_NUM}
+    depends_on:
+      - server
+    volumes:
+      - ./data:/crux/data
+    environment:
+      - RUST_LOG=${RUST_LOG}
+      - COORDINATORS=http://0.0.0.0:3000/workers

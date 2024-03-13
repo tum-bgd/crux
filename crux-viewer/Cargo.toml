@@ -1,0 +1,23 @@
+[package]
+name = "crux-viewer"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+arrow = { workspace = true }
+bevy = { version = "0.12.1", default-features = false, features = ["bevy_core_pipeline", "bevy_gizmos", "bevy_winit", "multi-threaded", "x11"] }
+bevy-aabb-instancing = "0.11.0"
+bevy_panorbit_camera = "0.13.1"
+colorgrad = "0.6.2"
+futures-lite = "2.2.0"
+reqwest = { workspace = true }
+rstar ={ workspace = true }
+tokio = { workspace = true, features = ["rt", "macros"] }
+
+crux-format = { path = "../crux-format" }
+crux-io = { path = "../crux-io" }
+
+# [target.wasm32-unknown-unknown]
+# runner = "wasm-server-runner"
