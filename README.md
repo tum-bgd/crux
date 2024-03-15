@@ -10,7 +10,7 @@
 
 ### Prepare data
 
-Download some sample data from AHN4 with the `ahn.py` script.
+Download some sample data from AHN with the `ahn.py` script.
 
 ```bash
 python scripts/ahn.py --dataset AHN3 --filenames C_69AZ1
