@@ -2,6 +2,8 @@
 
 **Point cloud data management research experiments.**
 
+[![DOI](https://zenodo.org/badge/771473869.svg)](https://zenodo.org/doi/10.5281/zenodo.10822177)
+
 ![](./assets/pointcloud.png)
 
 ## Quick Start
